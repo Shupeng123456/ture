@@ -29,12 +29,12 @@
 				},
 				swiperSlides:[
 				{
-				 imgurl:'../../../../static/img/2015.png',
+				 imgurl:'https://pic5.40017.cn/03/000/d5/6b/rB5oQFx4846ATjD9AAMGEUvrZHQ915_520x218_00.jpg',
 				 id:'001'
 				},
 				{
 				 
-				 imgurl:'../../../../static/img/2015.png',
+				 imgurl:'https://pic5.40017.cn/03/000/28/73/rB5oQFxG7M2AOgxwAADChAKgVcA559_520x218_00.jpg',
 				 id:'002'
 				}
 			  ]
@@ -45,7 +45,7 @@
 
 <style lang='stylus' scoped>
 .wr >>> .swiper-pagination-bullet
-  background:#fff!important
+  background:#fff
 .slide
   width:100%
 </style>

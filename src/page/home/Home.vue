@@ -2,6 +2,7 @@
    <div class="home">
    <home-Header class="home-header"></home-Header>
 	<home-Swiper></home-Swiper>
+	<home-Catalog></home-Catalog>
     </div>
 	
 </template>
@@ -9,11 +10,13 @@
 <script>
   import homeHeader from './components/homeHeader'
   import homeSwiper from './components/homeSwiper'
+  import homeCatalog from './components/homeCatalog'
 	export default{		
 		name:'Home',
 		components:{
 			homeHeader,
-			homeSwiper
+			homeSwiper,
+			homeCatalog
 		}
 	}
 </script>
