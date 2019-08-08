@@ -3,6 +3,7 @@
    <home-Header class="home-header"></home-Header>
 	<home-Swiper></home-Swiper>
 	<home-Catalog></home-Catalog>
+	<home-Hot></home-Hot>
     </div>
 	
 </template>
@@ -11,12 +12,14 @@
   import homeHeader from './components/homeHeader'
   import homeSwiper from './components/homeSwiper'
   import homeCatalog from './components/homeCatalog'
+   import homeHot from './components/homeHot'
 	export default{		
 		name:'Home',
 		components:{
 			homeHeader,
 			homeSwiper,
-			homeCatalog
+			homeCatalog,
+			homeHot
 		}
 	}
 </script>
