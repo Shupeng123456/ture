@@ -51,6 +51,8 @@
 <style lang="stylus" scoped>
 .catalog
   margin-top:.19rem
+  margin-bottom:.2rem
+  overflow:hidden
 .icon
    width:25%
    text-align:center
