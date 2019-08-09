@@ -86,7 +86,7 @@
 	.weekend
 	 overflow:hidden
 	 height:0
-	 padding-bottom:65%
+	 padding-bottom:55%
 	 border-top: 0.2rem solid #ee
 	 margin-top:0.2rem
 	 .weekend-header

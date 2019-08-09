@@ -140,7 +140,7 @@
 	 .hot-right
 	  float:right 
 	  overflow:hidden
-	  width:47%
+	  width:46%
 	  border-left:.05rem solid #eee
 	  .right-top
 	   display:flex
@@ -152,9 +152,13 @@
 	   .top-left
 	    font-weight:bold
 	    padding-top:.15rem
+	    overflow:hidden
 	    p
 	     color:#ccc
 	     padding-top:.3rem
+	     overflow:hidden
+	     text-overflow:ellipsis
+	     white-space:nowrap 
 	   .top-right
 	    width:1.1rem
 	    img
