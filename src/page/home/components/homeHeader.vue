@@ -4,7 +4,9 @@
 			<span class="iconfont">&#xe641;</span>
 		</div>
 		<div class="header-search" :class=[scrollcontent]>上海翠湖公园<span class="iconfont">&#xe615;</span></div>
-		<div class="header-city ">北京<span class="iconfont">&#xe65d;</span></div>
+		<router-link to="/Location">
+		<div class="header-city " >{{city}}<span class="iconfont">&#xe65d;</span></div>
+		</router-link>
 	</div>
 </template>
 
@@ -17,6 +19,7 @@
 				scrollcontent:''
 			}
 		},
+		props:['city'],
 		methods:{
 			scrollguand(){
 				let height=document.documentElement.scrollTop

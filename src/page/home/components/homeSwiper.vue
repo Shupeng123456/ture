@@ -2,8 +2,8 @@
  <div>
   <swiper :options="swiperOption" >
     <!-- slides -->
-    <swiper-slide v-for="item of swiperSlides" :key="item.id">
-    	<img :src='item.imgurl' class="slide" />
+    <swiper-slide v-for="item of swiperList" :key="item.id">
+    	<img :src='item.imgUrl' class="slide" />
     </swiper-slide>
   
   
@@ -17,6 +17,9 @@
 <script>
 	export default{
 		name:"homeSwiper",
+		props:{
+			swiperList:{Array}
+		},
 		data(){
 			return{
 				
@@ -27,17 +30,8 @@
                       speed: 1000,
                       
 				},
-				swiperSlides:[
-				{
-				 imgurl:'https://pic5.40017.cn/03/000/d5/6b/rB5oQFx4846ATjD9AAMGEUvrZHQ915_520x218_00.jpg',
-				 id:'001'
-				},
-				{
-				 
-				 imgurl:'https://pic5.40017.cn/03/000/28/73/rB5oQFxG7M2AOgxwAADChAKgVcA559_520x218_00.jpg',
-				 id:'002'
-				}
-			  ]
+				
+				
 			}
 		}
 	}

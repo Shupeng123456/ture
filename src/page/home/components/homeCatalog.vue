@@ -1,13 +1,13 @@
 <template>
 	<div class="catalog">
 		<div class="icon"
-			 v-for='itme of iconlist'
+			 v-for='itme of iconList'
 			 :key='itme.id'
 			 >
 			<div class="icon-img" >
-				<img class="img" :class="[itme.color]" :src="itme.imgulr">
+				<img class="img" :class="[itme.color]" :src="itme.imgUrl">
 			</div>
-			<div class="icon-doce">{{itme.decu}}</div>
+			<div class="icon-doce">{{itme.desc}}</div>
 		</div>
 	</div>
 </template>
@@ -15,35 +15,8 @@
 <script>
 	export default{
 		name:'homeCatalog',
-		data(){
-			return{
-			iconlist:[
-			{
-				id:'001',
-				imgulr:'https://pic5.40017.cn/01/000/84/4f/rBLkBVmLtaiAcmRaAAAEH9JbM6g234.png',
-				decu:'本地热推',
-				color:'red'
-			},
-			{
-				id:'002',
-				imgulr:'https://pic5.40017.cn/02/001/6d/e2/rBLkCFmEG8eALBI8AAAEA1xXmqI793.png',
-				decu:'亲子游',
-				color:'green'
-			},
-			{
-				id:'003',
-				imgulr:'https://pic5.40017.cn/02/001/6d/db/rBLkCVmEGfeAVI4FAAAEXdabEDE534.png',
-				decu:'温泉预售',
-				color:'blue'
-			},
-			{
-				id:'004',
-				imgulr:'https://pic5.40017.cn/02/001/6d/e2/rBLkCFmEG8eALBI8AAAEA1xXmqI793.png',
-				decu:'自然风光',
-				color:'pink'
-			}
-			]
-		}
+		props:{
+			iconList:{Array}
 		}
 	}
 </script>

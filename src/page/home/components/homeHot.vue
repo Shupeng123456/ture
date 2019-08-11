@@ -1,9 +1,6 @@
 <template>
 	<div class="hot">
-		<div class="hot-left" 
-			v-for="itme of hotlisc"
-			:key="itme.id"
-			>
+		<div class="hot-left" >
 			<div class="left-top">
 				<div class="top-content">
 					限时抢购
@@ -12,20 +9,26 @@
 					距结束 <span>02</span>:<span>28</span>:<span>32</span>
 				</div>
 			</div>
-			<div class="left-center">
+			<div class="left-center" 
+				v-for="itme of hotContentList"
+			     :key="itme.id"
+				>
 				<div class="center-img">
-					<img :src="itme.imgurl" />
+					<img :src="itme.imgUrl" />
 				</div>
 				<div class="center-desc">
-					{{itme.dace}}
+					{{itme.desc}}
 				</div>
 		    </div>
-			<div class="left-bottom">
+			<div class="left-bottom"
+				v-for="itme of hotPriseList"
+			     :key="itme.id"
+				>
 				<div class="bottom-left">
-					限量<span>{{itme.so}}</span>份
+					限量<span>{{itme.num}}</span>份
 				</div>
 				<div class="bottom-right">
-					<span>￥</span><span class="big">{{itme.big}}</span>起
+					<span>￥</span><span class="big">{{itme.prise}}</span>起
 				</div>
 			</div>
 		</div>
@@ -36,11 +39,11 @@
 				:key="itme.id"
 				>
 				<div class="top-left">
-					{{itme.dace}}
-					<p>{{itme.boar}}</p>
+					{{itme.desc}}
+					<p>{{itme.crite}}</p>
 				</div>
 				<div class="top-right">
-					<img :src="itme.imgurl" />
+					<img :src="itme.imgUrl" />
 				</div>
 			</div>
 			
@@ -53,30 +56,10 @@
 <script>
 	export default{
 		name:'homeHot',
-		data(){
-			return {
-				hotlisc:[
-				{
-					id:'001',
-					imgurl:'https://pic5.40017.cn/01/000/9d/d9/rBLkBlmSl26AACtXAALg8QhHckM352_100x100_00.jpg',
-					dace:'上海野生动物园成人票2张+上海浦东机场莎海国际酒店豪华双床房1晚',
-					so:'100',
-					big:'299'
-				}],
-				hotTrendList:[{
-					id:'001',
-					dace:'温泉爆款',
-					boar:'又到一年温泉季',
-					imgurl:'https://pic5.40017.cn/01/000/65/88/rBANC1usNjyAWsDJAACkawp55dU429_100x100_00.png'
-				},
-				{
-					id:'002',
-					dace:'温泉爆款',
-					boar:'又到一年温泉季',
-					imgurl:'https://pic5.40017.cn/01/000/65/88/rBANC1usNjyAWsDJAACkawp55dU429_100x100_00.png'
-				}
-				],
-			}
+		props:{
+		 hotContentList:{Array},
+		 hotPriseList:{Array},
+		 hotTrendList:{Array}
 		}
 	}
 </script>
@@ -148,11 +131,11 @@
 	   width:100%
 	   justify-content:space-around
 	   border-bottom:.03rem #eee solid
-	   
 	   .top-left
 	    font-weight:bold
 	    padding-top:.15rem
 	    overflow:hidden
+	    width:50%
 	    p
 	     color:#ccc
 	     padding-top:.3rem
